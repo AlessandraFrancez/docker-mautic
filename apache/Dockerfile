@@ -63,6 +63,7 @@ COPY makeconfig.php /makeconfig.php
 COPY makedb.php /makedb.php
 COPY mautic.crontab /etc/cron.d/mautic
 RUN chmod 644 /etc/cron.d/mautic
+COPY composer.json /var/www/html/composer.json
 
 # Enable Apache Rewrite Module
 RUN a2enmod rewrite
